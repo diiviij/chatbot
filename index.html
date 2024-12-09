@@ -3,28 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Test Page for Healenium">
+    <title>Healenium Test Page</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 10px 20px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #6200ea;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        /* Main */
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        section {
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 15px;
+        }
+
+        /* Form */
+        form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #6200ea;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #5300d6;
+        }
+
+        /* Buttons */
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #btn-primary {
+            background-color: #6200ea;
+            color: #fff;
+        }
+
+        #btn-secondary {
+            background-color: #ddd;
+            color: #333;
+        }
+
+        #btn-secondary:hover {
+            background-color: #ccc;
+        }
+
+        /* Links */
+        a {
+            color: #6200ea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table thead {
+            background-color: #6200ea;
+            color: white;
+        }
+
+        table th,
+        table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
 </head>
 <body>
-    <header>Voice Chat with Bot</header>
-    <section class="main">
-            <div class="user-area">
-                <img src="images/user.png">
-            </div>
-            <div class="chatarea-main">
-                <div class="chatarea-outer">
-                    <!-- <div class="chatarea-inner user">Hello hi, how area you, i am good. What about you!</div>
-                    <div class="chatarea-inner chatbot">Hello hi, how area you, i am good. What about you!</div>
-                    <div class="chatarea-inner user">Hello hi, how area you, i am good. What about you!</div> -->
-                </div>
-            </div>    
-            <div class="chatbot-area">
-                <img src="images/chatbot.png">
-            </div>
-        <button id="mic"><i class="flaticon-microphone"></i></button>
-    </section>
-    <script src="js/main.js"></script>
+    <header>
+        <h1>Healenium Test Page</h1>
+    </header>
+    <main>
+        <section id="forms">
+            <h2>Form Elements</h2>
+            <form action="#">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+
+        <section id="buttons">
+            <h2>Buttons</h2>
+            <button id="btn-primary">Primary Button</button>
+            <button id="btn-secondary" class="secondary">Secondary Button</button>
+        </section>
+
+        <section id="links">
+            <h2>Links</h2>
+            <a href="#forms">Go to Forms</a>
+            <a href="https://example.com" target="_blank">External Link</a>
+        </section>
+
+        <section id="tables">
+            <h2>Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jane Smith</td>
+                        <td>25</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Healenium Test Page</p>
+    </footer>
 </body>
 </html>
-
