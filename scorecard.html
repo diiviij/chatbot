@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Test Page for Healenium">
+    <title>Healenium Test Page</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 10px 20px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #6200ea;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        /* Buttons Section */
+        #buttons-section {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn {
+            background-color: #6200ea;
+            color: white;
+            border: none;
+        }
+
+        .btn:hover {
+            background-color: #5300d6;
+        }
+
+        .count-display {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Healenium Button Click Counter</h1>
+        <p id="total-clicks" class="count-display">Total Clicks: 0</p>
+    </header>
+    <main>
+        <section id="buttons-section">
+            <button class="btn" id="button1" onclick="incrementCount('Button 1')">Button 1</button>
+            <button class="btn" id="button2" onclick="incrementCount('Button 2')">Button 2</button>
+            <button class="btn" id="button3" onclick="incrementCount('Button 3')">Button 3</button>
+            <button class="btn" id="button4" onclick="incrementCount('Button 4')">Button 4</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Healenium Test Page</p>
+    </footer>
+
+    <script>
+        // Variable to store the total count
+        let totalClicks = 0;
+
+        // Function to increment the count
+        function incrementCount(buttonName) {
+            totalClicks++;
+            // Update the total clicks in the heading
+            document.getElementById("total-clicks").textContent = `Total Clicks: ${totalClicks}`;
+            // Log the button click (optional)
+            console.log(`${buttonName} was clicked!`);
+        }
+    </script>
+</body>
+</html>
